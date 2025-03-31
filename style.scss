@@ -104,31 +104,30 @@ main {
           align-items: center;
           background-color: #292929;
         }
-        p{
+        p {
           opacity: 1;
         }
       }
     }
   }
-  #section3{
+  #section3 {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     gap: 1.2rem;
-    .image{
+    .image {
       width: 100%;
-      
-      
-      img{
+
+      img {
         width: 100%;
         height: 60vh;
         object-fit: cover;
         border-radius: 1.2rem;
       }
     }
-    .text{
+    .text {
       width: 100%;
       height: 60vh;
       background-color: #1e1e1e;
@@ -136,38 +135,79 @@ main {
       display: flex;
       flex-direction: column;
       gap: 2rem;
-      .heading{
+      .heading {
         padding: 2.7rem;
         display: flex;
         flex-direction: column;
         gap: 2rem;
         color: aliceblue;
         font-family: "Poppins", sans-serif;
-        h1{
+        h1 {
           font-weight: 300;
           font-size: 2.4rem;
           line-height: 1em;
         }
-        .para{
+        .para {
           display: flex;
           flex-direction: column;
           gap: 1rem;
           padding-bottom: 2rem;
-          p{
+          p {
             font-size: 1rem;
             opacity: 0.7;
-
           }
         }
       }
     }
-   
   }
+  #section4 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    .image {
+      width: 100%;
+      img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 1.2rem;
+      }
+    }
+    .text {
+      width: 100%;
 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      gap: 1rem;
+
+      .vid {
+        width: 100%;
+        border-radius: 0.7rem;
+        display: flex;
+        align-items: center;
+        height: 10vh;
+        padding: 1.2rem;
+        background-color: #1e1e1e;
+        h1 {
+          color: white;
+          font-family: "Poppins", sans-serif;
+          font-weight: 300;
+          font-size: 1.7rem;
+        }
+        p{
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 1020px) {
   main {
+    gap: 2.4rem; /* Reduce the overall gap between sections from 2.3rem */
+
     #hero-section {
       .image {
         height: 40rem;
@@ -187,14 +227,65 @@ main {
         }
       }
     }
+
     #section2 {
       flex-direction: row;
+      gap: 1rem; /* Ensure consistent spacing between boxes */
     }
+
     #section3 {
       flex-direction: row;
-      .heading{
-        .para{
-          flex-direction: row;
+      height: 80vh; /* Reduced from 120vh to make it more compact */
+      gap: 1.2rem; /* Keep this consistent with other sections */
+
+      .image {
+        width: 50%; /* Make image and text equal width */
+        height: 100%; /* Match container height */
+        img {
+          height: 100%; /* Ensure image fills container */
+        }
+      }
+
+      .text {
+        width: 50%; /* Make text container equal width */
+        height: 100%; /* Match container height */
+        .heading {
+          padding: 2rem; /* Slightly reduced padding */
+          gap: 1.5rem; /* Reduced from 2rem */
+
+          h1 {
+            font-size: 3rem;
+          }
+
+          .para {
+            padding-bottom: 0; /* Remove extra bottom padding */
+            gap: 0.8rem; /* Reduced from 1rem */
+            p {
+              font-size: 0.9rem; /* Slightly larger for readability */
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+    }
+    #section4{
+      flex-direction: row-reverse;
+      .text{
+        gap: 1rem;
+
+        .vid{
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          height: 19vh;
+          gap: 1rem;
+          border-radius: 1.2rem;
+          p{
+            width: 1.2rem;
+            display: contents;
+            color: rgb(143, 135, 135);
+            opacity: 0.6;
+          }
         }
       }
     }

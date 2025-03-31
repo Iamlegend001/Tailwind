@@ -160,8 +160,51 @@ main #section3 .text .heading .para p {
   font-size: 1rem;
   opacity: 0.7;
 }
+main #section4 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+main #section4 .image {
+  width: 100%;
+}
+main #section4 .image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1.2rem;
+}
+main #section4 .text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+main #section4 .text .vid {
+  width: 100%;
+  border-radius: 0.7rem;
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  padding: 1.2rem;
+  background-color: #1e1e1e;
+}
+main #section4 .text .vid h1 {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 1.7rem;
+}
+main #section4 .text .vid p {
+  display: none;
+}
 
 @media (min-width: 1020px) {
+  main {
+    gap: 2.4rem; /* Reduce the overall gap between sections from 2.3rem */
+  }
   main #hero-section .image {
     height: 40rem;
   }
@@ -182,11 +225,57 @@ main #section3 .text .heading .para p {
   }
   main #section2 {
     flex-direction: row;
+    gap: 1rem; /* Ensure consistent spacing between boxes */
   }
   main #section3 {
     flex-direction: row;
+    height: 80vh; /* Reduced from 120vh to make it more compact */
+    gap: 1.2rem; /* Keep this consistent with other sections */
   }
-  main #section3 .heading .para {
-    flex-direction: row;
+  main #section3 .image {
+    width: 50%; /* Make image and text equal width */
+    height: 100%; /* Match container height */
+  }
+  main #section3 .image img {
+    height: 100%; /* Ensure image fills container */
+  }
+  main #section3 .text {
+    width: 50%; /* Make text container equal width */
+    height: 100%; /* Match container height */
+  }
+  main #section3 .text .heading {
+    padding: 2rem; /* Slightly reduced padding */
+    gap: 1.5rem; /* Reduced from 2rem */
+  }
+  main #section3 .text .heading h1 {
+    font-size: 3rem;
+  }
+  main #section3 .text .heading .para {
+    padding-bottom: 0; /* Remove extra bottom padding */
+    gap: 0.8rem; /* Reduced from 1rem */
+  }
+  main #section3 .text .heading .para p {
+    font-size: 0.9rem; /* Slightly larger for readability */
+    opacity: 0.7;
+  }
+  main #section4 {
+    flex-direction: row-reverse;
+  }
+  main #section4 .text {
+    gap: 1rem;
+  }
+  main #section4 .text .vid {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 19vh;
+    gap: 1rem;
+    border-radius: 1.2rem;
+  }
+  main #section4 .text .vid p {
+    width: 1.2rem;
+    display: contents;
+    color: rgb(143, 135, 135);
+    opacity: 0.6;
   }
 }/*# sourceMappingURL=style.css.map */
